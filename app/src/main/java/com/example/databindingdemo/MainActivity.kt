@@ -61,20 +61,6 @@ class MainActivity : BaseActivityBinding<ActivityMainBinding>(),
 
     private fun setup_filter_action() {
         binding.viewType.setOnClickListener {
-            /*val adaper = ArrayAdapter(this@MainActivity, android.R.layout.simple_list_item_1, types)
-            val builder = AlertDialog.Builder(this@MainActivity)
-                .setAdapter(adaper) { dialog, which ->
-                    dialog.dismiss()
-                    if (topJikanType.type != types[which]) {
-                        subTypeIndex = 0
-                        topJikanType = TopJikanType(types[which])
-                        setup_tab()
-                        changeConfig()
-                    }
-                }.setTitle("Choose Content")
-            val alertDialog = builder.create()
-            alertDialog.show()*/
-
             val topJikanTypes = ArrayList<TopJikanType>()
             types.forEach {
                 topJikanTypes.add(TopJikanType(it))
